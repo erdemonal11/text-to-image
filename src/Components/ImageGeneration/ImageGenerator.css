@@ -1,0 +1,191 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .ai {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header {
+    font-size: 2em;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .header span {
+    font-weight: bold;
+    color: #ffd700;
+  }
+  
+  .img-load {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .search-bar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 90%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .search-input:focus {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .generate-btn,
+  .back-btn,
+  .download-btn {
+    padding: 12px 24px;
+    background-color: #ffd700;
+    color: #333;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .generate-btn:hover,
+  .back-btn:hover,
+  .download-btn:hover {
+    background-color: #ffc107;
+    transform: translateY(-2px);
+  }
+  
+  .generate-btn:active,
+  .back-btn:active,
+  .download-btn:active {
+    transform: translateY(0);
+  }
+  
+  .error-message {
+    color: #ff4d4f;
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  .loading-message {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  .loading-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  
+  .loading-bar {
+    width: 0;
+    height: 100%;
+    background-color: #3498db;
+    animation: load 2s infinite;
+  }
+  
+  @keyframes load {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      font-size: 1.8em;
+    }
+  
+    .generate-btn,
+    .back-btn,
+    .download-btn {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      font-size: 1.5em;
+    }
+  
+    .search-input {
+      padding: 8px 16px;
+    }
+  
+    .generate-btn,
+    .back-btn,
+    .download-btn {
+      font-size: 0.8em;
+      padding: 10px 20px;
+    }
+  }
+  
+  .erdemlabel {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #111;
+    transition: color 0.5s;
+  }
+  
+  .erdemlabel:hover {
+    color: #ffd700;
+  }
+  
