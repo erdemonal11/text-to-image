@@ -106,6 +106,7 @@ export const ImageGenerator = () => {
         </div>
       </div>
       <div className="erdemlabel"><a href="https://github.com/erdemonal11" target="_blank" className="erdemlabel">erdemapps.</a></div>
+      <div>Due to high API maintenance, you may encounter errors while generating images. </div>
     </div>
   );
 };
