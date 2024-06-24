@@ -13,7 +13,9 @@ export const ImageGenerator = () => {
       const response = await fetch(
         "https://api-inference.huggingface.co/models/fluently/Fluently-XL-Final",
         {
-          headers: { Authorization: "Bearer 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" },
+          headers: {
+            Authorization: "Bearer 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",
+          },
           method: "POST",
           body: JSON.stringify(data),
         }
@@ -46,7 +48,9 @@ export const ImageGenerator = () => {
       setImageUrl(imageUrl);
       setErrorMessage("");
     } catch (error) {
-      setErrorMessage("An error occurred while generating the image: " + error.message);
+      setErrorMessage(
+        "An error occurred while generating the image: " + error.message
+      );
     } finally {
       setLoading(false);
     }
@@ -74,7 +78,10 @@ export const ImageGenerator = () => {
       </div>
       <div className="img-load">
         <div className="image">
-          <img src={imageUrl === "/" ? default_img : imageUrl} alt="Generated" />
+          <img
+            src={imageUrl === "/" ? default_img : imageUrl}
+            alt="Generated"
+          />
           {imageUrl === "/" && (
             <div className="search-bar">
               <input
@@ -93,11 +100,17 @@ export const ImageGenerator = () => {
           ) : (
             <div>
               {imageUrl === "/" ? (
-                <div className="generate-btn" onClick={generateImage}>Generate</div>
+                <div className="generate-btn" onClick={generateImage}>
+                  Generate
+                </div>
               ) : (
                 <div>
-                  <div className="back-btn" onClick={reset}>Go Back</div>
-                  <div className="download-btn" onClick={downloadImage}>Download</div>
+                  <div className="back-btn" onClick={reset}>
+                    Go Back
+                  </div>
+                  <div className="download-btn" onClick={downloadImage}>
+                    Download
+                  </div>
                 </div>
               )}
             </div>
@@ -105,8 +118,20 @@ export const ImageGenerator = () => {
           {errorMessage && <div className="error-message">{errorMessage}</div>}
         </div>
       </div>
-      <div className="erdemlabel"><a href="https://github.com/erdemonal11" target="_blank" className="erdemlabel">erdemapps.</a></div>
-      <div>Due to high API maintenance, you may encounter errors while generating images. </div>
+
+      <div>
+        Due to high API maintenance, you may encounter errors while generating
+        images.{" "}
+      </div>
+      <div className="erdemlabel">
+        <a
+          href="https://github.com/erdemonal11"
+          target="_blank"
+          className="erdemlabel"
+        >
+          erdemapps.
+        </a>
+      </div>
     </div>
   );
 };
